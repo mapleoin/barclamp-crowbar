@@ -1,24 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <title>The change you wanted was rejected (422)</title>
-  <link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="/images/favicon.gif">
-
-</head>
-
-<body>
-    <header class='navbar navbar-static-top navbar-inverse'>
-      <div class='navbar-inner'>
-        <div class='container'>
-          <div class='row-fluid'>
-            <div class='span4'>
-              <a class='brand' href='/'>
-                <span style='font-weight: bold'>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crowbar: 422 Error</title>
+    <link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="/images/favicon.gif">
+  </head>
+  <body>
+    <header class="navbar navbar-static-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <div class="row-fluid">
+            <div class="span4">
+              <a class="brand" href="/">
+                <span style="font-weight: bold">
                   SUSE Cloud
                 </span>
                 <span>
@@ -26,30 +20,86 @@
                 </span>
               </a>
             </div>
-            <div class='span8'>
-              <nav class='mainMenu'>
-                <ul><li class="selected simple-navigation-active-leaf" id="nodes"><a href="/" class="selected">Nodes</a><ul><li id="dashboard"><a href="/dashboard">Dashboard</a></li><li id="bulkedit"><a href="/nodes/list?allocated=yes">Bulk Edit</a></li></ul></li><li id="network"><a href="/network">Network</a><ul><li id="switch"><a href="/network/switch">Switches</a></li><li id="vlan"><a href="/network/vlan">VLANs</a></li></ul></li><li id="barclamps"><a href="/crowbar/modules/1.0">Barclamps</a><ul><li id="barclamps"><a href="/crowbar/modules/1.0">All Barclamps</a></li><li id="crowbar"><a href="/crowbar/crowbar/1.0">Crowbar</a></li><li id="openstack"><a href="/crowbar/openstack/1.0">OpenStack</a></li></ul></li><li id="utils"><a href="/utils">Utilities</a><ul><li id="util_index"><a href="/utils">Exported Items</a></li><li id="swift"><a href="/swift/dashboard/">Swift Dispersion</a></li></ul></li><li id="help"><a href="/docs">Help</a></li></ul>
+            <div class="span8">
+              <nav class="mainMenu">
+                <ul>
+                  <li class="selected simple-navigation-active-leaf" id="nodes">
+                    <a href="/" class="selected">Nodes</a>
+                    <ul>
+                      <li id="dashboard">
+                        <a href="/dashboard">Dashboard</a>
+                      </li>
+                      <li id="bulkedit">
+                        <a href="/nodes/list?allocated=yes">Bulk Edit</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="network">
+                    <a href="/network">Network</a>
+                    <ul>
+                      <li id="switch">
+                        <a href="/network/switch">Switches</a>
+                      </li>
+                      <li id="vlan">
+                        <a href="/network/vlan">VLANs</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="barclamps">
+                    <a href="/crowbar/modules/1.0">Barclamps</a>
+                    <ul>
+                      <li id="barclamps">
+                        <a href="/crowbar/modules/1.0">All Barclamps</a>
+                      </li>
+                      <li id="crowbar">
+                        <a href="/crowbar/crowbar/1.0">Crowbar</a>
+                      </li>
+                      <li id="openstack">
+                        <a href="/crowbar/openstack/1.0">OpenStack</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="utils">
+                    <a href="/utils">Utilities</a>
+                    <ul>
+                      <li id="util_index">
+                        <a href="/utils">Exported Items</a>
+                      </li>
+                      <li id="swift">
+                        <a href="/swift/dashboard/">Swift Dispersion</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="help">
+                    <a href="/docs">Help</a>
+                  </li>
+                </ul>
               </nav>
             </div>
           </div>
         </div>
       </div>
     </header>
-  </body>
-  <div class='container' id='main'>
-    <h2 class='page-header'>
-      The change you wanted was rejected.
-    </h2>
-    <div class='page-header-bottom'></div>
-    <div class="message">
-      <p>Maybe you tried to change something you didn't have access to.</p>
+
+    <div class="container" id="main">
+      <h2 class='page-header'>
+        The change you wanted was rejected.
+      </h2>
+
+      <div class='page-header-bottom'>
+      </div>
+
+      <div class="message">
+        <p>
+          Maybe you tried to change something you didn't have access to.
+        </p>
+      </div>
     </div>
-  </div>
-  <footer>
-    <a href="https://www.suse.com/products/suse-cloud/" target="_new">SUSE Cloud v2.0</a>
-    &nbsp
-    Provided by
-    <a href="https://www.suse.com" target="_new">SUSE</a>
-  </footer>
+
+    <footer>
+      <a href="https://www.suse.com/products/suse-cloud/" target="_new">SUSE Cloud v2.0</a>
+      &nbsp;
+      Provided by <a href="https://www.suse.com" target="_new">SUSE</a>
+    </footer>
   </body>
 </html>
