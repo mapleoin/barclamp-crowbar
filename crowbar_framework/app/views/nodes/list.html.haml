@@ -82,7 +82,6 @@
             %tr
               %td{:colspan => @columns + 1}
                 = t 'no_items'
-
         - if @nodes.count > 0
           %tfoot
             %tr{ :class => cycle(:odd, :even, :name => "nodes")}

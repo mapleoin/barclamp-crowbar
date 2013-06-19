@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .row
   .span12
     -# Rails 2 needs - and Rails 3 needs =
@@ -12,7 +11,7 @@
           = f.label :license_key, t('.license_key'), :class => "control-label"
           .controls
             = text_field_tag :license_key, @node.license_key, :size => 20
-      -else
+      - else
         .control-group
           = f.label :target_platform, t('.target_platform'), :class => "control-label"
           .controls
@@ -21,14 +20,6 @@
           = f.label :license_key, t('.license_key'), :class => "control-label"
           .controls
             = @node.license_key
-      .control-group
-        = f.label :target_platform, t('.target_platform'), :class => "control-label"
-        .controls
-          = select_tag :target_platform, options_for_select(option_default(@options[:target], @node.target_platform, 'target_platform'), @node.target_platform), {:onchange => "showLicense(this)"}
-      .control-group#licenseKey{:style => @node.target_platform == 'windows-6.2' ? 'display:block' : 'display:none'}
-        = f.label :license_key, t('.license_key'), :class => "control-label"
-        .controls
-          = text_field_tag :license_key, @node.license_key, :size => 20
       .control-group
         = f.label :alias, t('.alias'), :class => "control-label"
         .controls

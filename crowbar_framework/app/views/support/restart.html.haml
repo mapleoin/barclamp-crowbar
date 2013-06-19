@@ -19,8 +19,7 @@
             = link_to SERVER_PID+'.import.log', utils_files_path
           %div
             - File.open(log, 'r').each do |line|
-              %p= line
-            
+              %p= line         
 - else
   = link_to t('.button'), restart_path(:id=>'request'), :class => 'btn', :id=>'restart_button'
   
