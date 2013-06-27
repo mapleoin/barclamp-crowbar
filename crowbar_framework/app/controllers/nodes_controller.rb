@@ -153,7 +153,11 @@ class NodesController < ApplicationController
     end
 
     @options = CrowbarService.read_options
+<<<<<<< HEAD
     @columns = @options[:show].count + 8
+=======
+    @columns = @options[:show].count + 6
+>>>>>>> [UI/UX] Get column span to match number of columns
 
     @nodes = {}
 
