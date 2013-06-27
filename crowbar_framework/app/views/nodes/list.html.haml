@@ -35,7 +35,7 @@
             %th 
               %label.checkbox.inline 
                 = check_box_tag 'all', 'all', false, {:onChange=>"check_all()"}
-                Allocate?
+                Allocate
         %tbody
           - if @nodes.count > 0
             - @nodes.sort_by{|handle, n| n.name }.each do |handle, node|
@@ -46,16 +46,12 @@
                   %td= text_field_tag "node:#{node.name}:alias".to_sym, "#{node.alias(true)}", :class => "span2"
                   %td= text_field_tag "node:#{node.name}:public_name".to_sym, "#{node.public_name(true)}", :size => 15
                   %td= "#{node.hardware}<br/>#{node.memory}<br/>#{node.nics} Nics"
-
                   %td= text_field_tag "node:#{node.name}:description".to_sym, "#{node.description(true)|| ""}", :class => "span3"
                   %td= text_field_tag "node:#{node.name}:group".to_sym, node.group(true), :class => "span2"
                   -if @options[:show].include? :bios
                     %td= select_tag "node:#{node.name}:bios".to_sym, options_for_select(option_default(@options[:bios], node.bios_set, 'bios'), node.bios_set)
                   -if @options[:show].include? :raid
                     %td= select_tag "node:#{node.name}:raid".to_sym, options_for_select(option_default(@options[:raid], node.raid_set, 'raid'), node.raid_set)
-
-
-
                   -unless node.allocated
                     %td= select_tag "node:#{node.name}:target_platform".to_sym, options_for_select(option_default(@target_platforms, node.target_platform, 'target_platform'), node.target_platform), {:onchange => "showLicense(this)"}
                     %td= text_field_tag "node:#{node.name}:license_key".to_sym, node.license_key, :size => 15, :style => CrowbarService.require_license_key?(node.target_platform) ? "display:block" : "display:none"
@@ -84,18 +80,17 @@
                     %td= t 'na'
                   %td= node.pretty_target_platform
                   %td.center= t 'na'
-                  %td.center= t 'na'
-      - else
-        %tr
-          %td{ :colspan=>8 }
-            = t 'no_items'
-    - if @nodes.count > 0
-      %tfoot
-        %tr{ :class => cycle(:odd, :even, :name => "nodes")}
-          %td.hint{:colspan => 7}
-            = t('note')+": "+t('.hint')
-          %td.action{:colspan => 1}
-            %input.btn.btn-success.pull-right{:type => "submit", :name => "submit", :value => 'Save'}
+          - else
+            %tr
+              %td{ :colspan=>6 }
+                = t 'no_items'
+        - if @nodes.count > 0
+          %tfoot
+            %tr{ :class => cycle(:odd, :even, :name => "nodes")}
+              %td.hint{:colspan => 5}
+                = t('note')+": "+t('.hint')
+              %td.action{:colspan => 1}
+                %input.btn.btn-success.pull-right{:type => "submit", :name => "submit", :value => 'Save'}
 
 .clear
 
