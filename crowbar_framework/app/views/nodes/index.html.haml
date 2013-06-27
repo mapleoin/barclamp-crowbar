@@ -5,6 +5,7 @@
     = link_to t('.add'), "javascript:add_group();", :class => 'btn', :id=>'add_button'
 .page-header-bottom
 %small.small-header= t(:status_empty, :scope => 'nodes.index', :count => @nodes.count)
+
 .row
   - unless @nodes.empty?
     .span12#details
