@@ -3,9 +3,9 @@
   - @modules.each do |name, barclamp|
     %tr{:id=>name, :class => ["barclamp", cycle(:odd, :even, :name => "barclamps")]}
       %td
-        %a{:href => "#", :id => "#{name.parameterize}_details_toggle", :class => "toggle with_label #{' on' if (params[:id]==name or barclamp[:expand])}" ,:rel => "#{name.parameterize}_details"}= name.titlecase
-      %td 
-        - if barclamp[:proposals].length == 0 
+        %a.toggle.with_label{:href => "#", :id => "#{name.parameterize}_details_toggle", :rel => "#{name.parameterize}_details"}= name.titlecase
+      %td
+        - if barclamp[:proposals].length == 0
           .led.div-center.none{:id => "#{name.parameterize}_none", :title=>t('proposal.status.none')}
         - else
           - barclamp[:proposals].sort.each do |proposal_name, proposal|
