@@ -78,23 +78,16 @@
                     %td= t 'na'
                   %td= node.pretty_target_platform
                   %td.text-center= t 'na'
+                  %td.text-center= t 'na'
           - else
             %tr
-<<<<<<< HEAD
-              %td{:colspan => @columns + 1}
-=======
               %td{:colspan => @columns}
->>>>>>> [UI/UX] Get column span to match number of columns
                 = t 'no_items'
 
         - if @nodes.count > 0
           %tfoot
             %tr{ :class => cycle(:odd, :even, :name => "nodes")}
-<<<<<<< HEAD
-              %td.hint{:colspan => @columns}
-=======
               %td.hint{:colspan => @columns-1}
->>>>>>> [UI/UX] Get column span to match number of columns
                 = t('note')+": "+t('.hint')
               %td.action.text-center{:colspan => 1}
                 %input.btn.btn-success.pull-right{:type => "submit", :name => "submit", :value => 'Save'}
