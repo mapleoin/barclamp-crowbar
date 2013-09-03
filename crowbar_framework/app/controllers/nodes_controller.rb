@@ -153,7 +153,7 @@ class NodesController < ApplicationController
     end
 
     @options = CrowbarService.read_options
-    @columns = @options[:show].count + 6
+    @columns = @options[:show].count + 8
 
     @nodes = {}
 
