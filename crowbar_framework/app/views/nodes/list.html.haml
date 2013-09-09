@@ -81,7 +81,7 @@
                   %td.text-center= t 'na'
           - else
             %tr
-              %td{:colspan => @columns}
+              %td{:colspan => @columns + 1}
                 = t 'no_items'
 
         - if @nodes.count > 0
