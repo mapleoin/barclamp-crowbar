@@ -1,8 +1,8 @@
 %h2.page-header
   = t('.title')
-  %form.form-inline.pull-right
+  %form.form-inline.pull-right{ :onsubmit => "javascript:add_group(); return false" }
     = text_field_tag 'new_group', nil, :placeholder => t('.default_new'), :size => 15
-    = link_to t('.add'), "javascript:add_group();", :class => 'btn', :id=>'add_button'
+    = submit_tag t('.add'), :class => 'btn', :id=>'add_button'
 .page-header-bottom
 %small.small-header= t(:status_empty, :scope => 'nodes.index', :count => @nodes.count)
 
